@@ -1,6 +1,6 @@
 package com.example.banderas
 
-import Screen.BanderaMexico
+import Screen.BanderaMexicoC
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.example.banderas.ui.theme.BanderasTheme
 
 
-class MainActivity : ComponentActivity()
+class MainActivity : ComponentActivity() //Codigo que corre la aplicacion
 {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaMexico(modifier = Modifier.padding(innerPadding),)
+                    BanderaMexicoC(modifier = Modifier.padding(innerPadding).fillMaxSize(),)
                 }
             }
         }
@@ -47,6 +47,6 @@ class MainActivity : ComponentActivity()
 fun BanderaPreview()
 {
     BanderasTheme {
-        BanderaMexico()
+        BanderaMexicoC(modifier = Modifier.fillMaxSize())
     }
 }
