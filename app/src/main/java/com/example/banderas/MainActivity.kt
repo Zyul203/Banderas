@@ -30,7 +30,6 @@ class MainActivity : ComponentActivity() //Codigo que corre la aplicacion
 }
 
 
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun BanderaPreview()

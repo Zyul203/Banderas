@@ -26,7 +26,6 @@ fun BanderaMexicoC(modifier: Modifier)
         val lineguia1 = createGuidelineFromStart(0.33f)
         val lineguia2 = createGuidelineFromStart(0.66f)
 
-
         Box(modifier = Modifier
             .background(colorResource(id = R.color.verde_mexico))
             .constrainAs(verde) {
@@ -75,6 +74,5 @@ fun BanderaMexicoC(modifier: Modifier)
 @Composable
 fun BanderaPreview()
 {
-        BanderaMexicoC(modifier = Modifier.fillMaxSize()) //Manda a llamar a la bandera pero dile q se abra
+    BanderaMexicoC(modifier = Modifier.fillMaxSize()) //Manda a llamar a la bandera pero dile q se abra
 }
-
