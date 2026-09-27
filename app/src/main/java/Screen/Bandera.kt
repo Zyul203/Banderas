@@ -13,9 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
-
 @Composable
-fun BanderaFrancia(modifier: Modifier = Modifier)
+fun BanderaFranciaC(modifier: Modifier = Modifier)
 {
     Row (modifier = modifier.fillMaxSize())
     {
