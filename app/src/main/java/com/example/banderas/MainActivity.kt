@@ -1,7 +1,5 @@
 package com.example.banderas
 
-
-import Screen.BanderaEspana
 import Screen.BanderaEspanaC
 import android.os.Bundle
 import androidx.activity.ComponentActivity
