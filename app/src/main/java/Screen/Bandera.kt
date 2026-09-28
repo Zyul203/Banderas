@@ -1,13 +1,11 @@
 package Screen
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -51,21 +49,20 @@ fun BanderaEspanaC(modifier: Modifier)
             height = Dimension.fillToConstraints
             width = Dimension.fillToConstraints
         })
-        {
-            Image(
-                painter = painterResource(id = R.drawable.escudo_espana),
-                contentDescription = "Escudo nacional",
-                modifier = Modifier.size(120.dp).constrainAs(escudo){
-                    // Centrado horizontalmente sobre la línea guía del 33%
-                    start.linkTo(lineaEscudo)
-                    end.linkTo(lineaEscudo)
+        Image(
+            painter = painterResource(id = R.drawable.escudo_espana),
+            contentDescription = "Escudo nacional",
+            modifier = Modifier.size(140.dp).constrainAs(escudo){
 
-                    // Centrado verticalmente dentro de la franja amarilla
-                    top.linkTo(lineaSup)
-                    bottom.linkTo(lineaInf)
-                }
-            )
-        }
+                // Centrado horizontalmente sobre la línea guía del 33%
+                start.linkTo(lineaEscudo)
+                end.linkTo(lineaEscudo)
+
+                // Centrado verticalmente dentro de la franja amarilla
+                top.linkTo(lineaSup)
+                bottom.linkTo(lineaInf)
+            }
+        )
 
         Box(modifier = Modifier.background(colorResource(id = R.color.rojo_espana)).constrainAs(rojoInf)
         {
