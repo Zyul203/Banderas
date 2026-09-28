@@ -1,6 +1,6 @@
 package com.example.banderas
 
-import Screen.BanderaFrancia
+import Screen.BanderaFranciaC
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaFrancia(modifier = Modifier.padding(innerPadding),)
+                    BanderaFranciaC(modifier = Modifier.padding(innerPadding),)
                 }
             }
         }
@@ -33,6 +33,6 @@ class MainActivity : ComponentActivity()
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaFrancia()
+        BanderaFranciaC(modifier = Modifier.fillMaxSize())
     }
 }
