@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() //Codigo que corre la aplicacion
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaMexicoC(modifier = Modifier.padding(innerPadding).fillMaxSize(),)
+                    BanderaMexicoC(modifier = Modifier.fillMaxSize().padding(innerPadding).fillMaxSize())
                 }
             }
         }
