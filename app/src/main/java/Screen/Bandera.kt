@@ -10,14 +10,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Constraints
+import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 @Composable
-fun BanderaItalia(modifier: Modifier = Modifier)
+fun BanderaItaliaC(modifier: Modifier)
 {
+    ConstraintLayout(modifier = Modifier)
+    {
+        val =
+    }
+
     Row (modifier = modifier.fillMaxSize())
     {
+
         Box(
             modifier = Modifier
                 .weight(1f)
@@ -44,6 +52,6 @@ fun BanderaItalia(modifier: Modifier = Modifier)
 fun BanderaPreview()
 {
     BanderasTheme {
-        BanderaItalia()
+        BanderaItaliaC(modifier = Modifier.fillMaxSize())
     }
 }
