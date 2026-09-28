@@ -18,13 +18,13 @@ import com.example.banderas.ui.theme.BanderasTheme
 fun BanderaFranciaC(modifier: Modifier)
 {
     ConstraintLayout(modifier = modifier) {
-        val (verde, blanco, rojo) = createRefs()
+        val (azul, blanco, rojo) = createRefs()
         val lineguia1 = createGuidelineFromStart(0.33f)
         val lineguia2 = createGuidelineFromStart(0.66f)
 
         Box(modifier = Modifier
             .background(colorResource(id = R.color.azul_francia))
-            .constrainAs(verde) {
+            .constrainAs(azul) {
                 start.linkTo(parent.start)
                 end.linkTo(lineguia1)
                 top.linkTo(parent.top)
