@@ -21,8 +21,8 @@ class MainActivity : ComponentActivity()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaFranciaC(modifier = Modifier.padding(innerPadding),)
-                }
+                    BanderaFranciaC(modifier = Modifier.fillMaxSize().padding(innerPadding),)
+                } //En el Modifier de bandera francia escribir fillMaxSize para que el constraint ocupe tdo el espacio
             }
         }
     }
