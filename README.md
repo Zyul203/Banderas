@@ -1,10 +1,10 @@
 **INDICE DE PRACTICAS**
 
-* [**IMG: Bandera de México**](img/bandera_mexico.png):  [Practica-01-Mexico](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico/app/src/main/java/Screen/Bandera.kt) | [Practica-01-Mexico_Constraint](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico_Constraint/app/src/main/java/Screen/Bandera.kt)
+* [**IMG: Bandera de México**](img/bandera_mexico.png):  [*Practica-01-Mexico*](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico/app/src/main/java/Screen/Bandera.kt) | [*Practica-01-Mexico_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-* [**IMG: Bandera de Francia**](img/bandera_francia.png):  [Practica-02-Francia](https://github.com/Zyul203/Banderas/blob/Practica-02-Francia/app/src/main/java/Screen/Bandera.kt) | [Practica-02-Francia_Constraint](https://github.com/Zyul203/Banderas/blob/Practica-02-Francia_Constraint/app/src/main/java/Screen/Bandera.kt)   
+* [**IMG: Bandera de Francia**](img/bandera_francia.png):  [*Practica-02-Francia*](https://github.com/Zyul203/Banderas/blob/Practica-02-Francia/app/src/main/java/Screen/Bandera.kt) | [*Practica-02-Francia_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-02-Francia_Constraint/app/src/main/java/Screen/Bandera.kt)   
 
-* [**IMG: Bandera de Italia**](img/bandera_italia.png):  [Practica-03-Italia](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia/app/src/main/java/Screen/Bandera.kt) |  [Practica-03-Italia_Constraint](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia_Constraint/app/src/main/java/Screen/Bandera.kt)
+* [**IMG: Bandera de Italia**](img/bandera_italia.png):  [*Practica-03-Italia*](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia/app/src/main/java/Screen/Bandera.kt) |  [*Practica-03-Italia_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia_Constraint/app/src/main/java/Screen/Bandera.kt)
 
 *  [**IMG: Bandera de Alemania**](img/bandera_alemania.png)
   [**Practica-04-Alemania**](https://github.com/Zyul203/Banderas_/blob/Practica-04-Alemania/app/src/main/java/com/example/banderas_/MainActivity.kt)  -  
