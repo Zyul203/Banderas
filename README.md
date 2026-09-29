@@ -6,9 +6,8 @@
 
 * [**IMG: Bandera de Italia**](img/bandera_italia.png):  [*Practica-03-Italia*](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia/app/src/main/java/Screen/Bandera.kt) |  [*Practica-03-Italia_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-03-Italia_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Alemania**](img/bandera_alemania.png):  [*Practica-04-Alemania*]() | [*Practica-04-Alemania_Constraint*]() 
+*  [**IMG: Bandera de Alemania**](img/bandera_alemania.png):  [*Practica-04-Alemania*](https://github.com/Zyul203/Banderas/blob/Practica-04-Alemania/app/src/main/java/Screen/Bandera.kt) | [*Practica-04-Alemania_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-04-Alemania_Constraint/app/src/main/java/Screen/Bandera.kt) 
   
-
 *  [**IMG: Bandera de España**](img/bandera_espana.png):  [*Practica-05-España*]() | [*Practica-05-España_Constraint*]()
 
 
