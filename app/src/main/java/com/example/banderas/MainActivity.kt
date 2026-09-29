@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaChileC(modifier = Modifier.padding(innerPadding),)
+                    BanderaChileC(modifier = Modifier.fillMaxSize().padding(innerPadding),)
                 }
             }
         }
@@ -33,6 +33,6 @@ class MainActivity : ComponentActivity()
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaChileC()
+        BanderaChileC(modifier = Modifier.fillMaxSize())
     }
 }
