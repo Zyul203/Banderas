@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -20,54 +18,10 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
-
-@Composable
-fun BanderaEstadosUnidos(modifier: Modifier = Modifier) {
-    Box(modifier = modifier.fillMaxSize()) {
-
-        Column (modifier = Modifier.fillMaxSize()) {
-            repeat(13) { index -> //Repeat como si fuera un FOR, index es el contador
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .fillMaxWidth()
-                        .background(
-                            if (index % 2 == 0) colorResource(id = R.color.rojo_EUA) else Color.White //La operacion es para saber si es par o impar mediante residuo
-                        )
-                )
-            }
-        }
-
-        Box(
-            modifier = Modifier
-                .fillMaxHeight(7f / 13f) // 7/13 de ancho
-                .fillMaxWidth(.4f) // 40% de altura
-                .background(colorResource(id = R.color.azul_EUA))
-                .align(Alignment.TopStart),
-            contentAlignment = Alignment.Center
-        ) {
-            Row (
-                modifier = Modifier.fillMaxSize()
-            ) {
-                repeat(11) { index ->
-
-                    if (index % 2 == 0 )
-                        C1(modifier = Modifier.weight(1f))
-                    else C2(modifier = Modifier.weight(1f))
-                }
-            }
-        }
-    }
-}
-/* LOGICA DEL BOX AZUL
-    6 columnas de C1 (con 5 estrellas): 6 X 5 = 30 estrellas
-    5 columnas de C2 (con 4 estrellas): 5 X 4 = 20 estrellas
-    Total = 50 estrellas
-*/
-
-
 
 @Composable
 fun C1(modifier: Modifier = Modifier) {
@@ -112,16 +66,70 @@ fun C2(modifier: Modifier = Modifier) {
 }
 
 
-@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun BanderaPreview() {
-    BanderasTheme {
-        BanderaEstadosUnidos()
+fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
+    ConstraintLayout(modifier = Modifier.fillMaxSize())
+    {
+        val (franjas, cuadroAzul) = createRefs()
+        val lineAzulAltura = createGuidelineFromTop(7f / 13f)
+        val lineAzulAncho = createGuidelineFromStart(0.4f)
+
+        Column(
+            modifier = Modifier.constrainAs(franjas) {
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+
+                width = Dimension.fillToConstraints
+                height = Dimension.fillToConstraints
+            }
+        ) {
+            repeat(13) { index ->
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(
+                            if (index % 2 == 0) colorResource(id = R.color.rojo_EUA) else Color.White
+                        )
+                )
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .background(colorResource(id = R.color.azul_EUA))
+                .constrainAs(cuadroAzul) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    bottom.linkTo(lineAzulAltura)     // Anclado a la guía del 53.8%
+                    end.linkTo(lineAzulAncho)        // Anclado a la guía del 40%
+
+                    width = Dimension.fillToConstraints
+                    height = Dimension.fillToConstraints
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Row(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                repeat(11) { index ->
+                    if (index % 2 == 0)
+                        C1(modifier = Modifier.weight(1f))
+                    else
+                        C2(modifier = Modifier.weight(1f))
+                }
+            }
+        }
     }
 }
 
 
-/* NOTAS PERSONALES
-Column (Columna): Apila sus elementos verticalmente (uno debajo de otro, hacia abajo).
-Row (Fila): Acomoda sus elementos horizontalmente (uno al lado de otro, de izquierda a derecha).
- */
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun BanderaPreview() {
+    BanderasTheme {
+        BanderaEstadosUnidosC()
+    }
+}
