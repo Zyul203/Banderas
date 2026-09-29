@@ -13,27 +13,44 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 
 
 @Composable
-fun BanderaJapon(modifier: Modifier = Modifier)
+fun BanderaJaponC(modifier: Modifier)
 {
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(Color.White))
+    ConstraintLayout(modifier = modifier)
     {
+        val (blanco) = createRefs()
+
         Box(modifier = Modifier
-            .align(Alignment.Center)
-            .size(200.dp)
-            .clip(CircleShape)
-            .background(Color.Red))
+            .background(Color.White)
+            .constrainAs(blanco)
+            {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+
+                height = Dimension.fillToConstraints
+                width = Dimension.fillToConstraints
+            }, contentAlignment = Alignment.Center
+        ) {
+            Box(modifier = Modifier
+                .align(Alignment.Center)
+                .size(200.dp)
+                .clip(CircleShape)
+                .background(Color.Red))
+        }
     }
 }
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaJapon()
+        BanderaJaponC(modifier = Modifier.fillMaxSize())
     }
 }
