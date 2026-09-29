@@ -68,7 +68,7 @@ fun C2(modifier: Modifier = Modifier) {
 
 @Composable
 fun BanderaEstadosUnidosC(modifier: Modifier = Modifier) {
-    ConstraintLayout(modifier = Modifier.fillMaxSize())
+    ConstraintLayout(modifier = Modifier.fillMaxSize()) //Si pongo el fillMaxSize aqui en el cel ocupara toda la pantalla y no dejara ningun margen en blanco
     {
         val (franjas, cuadroAzul) = createRefs()
         val lineAzulAltura = createGuidelineFromTop(7f / 13f)
