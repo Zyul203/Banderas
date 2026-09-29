@@ -1,8 +1,9 @@
 **INDICE DE PRACTICAS**
 
-* [IMG: Bandera de México](img/bandera_mexico.png): [**Practica-01-Mexico**](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico/app/src/main/java/Screen/Bandera.kt) | [**Practica-01-Mexico_Constraint**](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico_Constraint/app/src/main/java/Screen/Bandera.kt)
-  
-* [**Practica-02-Francia**](https://github.com/Zyul203/Banderas_/blob/Practica-02-Francia/app/src/main/java/com/example/banderas_/MainActivity.kt)  -  [IMG: Bandera de Francia](img/bandera_francia.png)
+* [**IMG: Bandera de México**](img/bandera_mexico.png): [Practica-01-Mexico](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico/app/src/main/java/Screen/Bandera.kt) | [Practica-01-Mexico_Constraint](https://github.com/Zyul203/Banderas/blob/Practica-01-Mexico_Constraint/app/src/main/java/Screen/Bandera.kt)
+
+* [**IMG: Bandera de Francia**](img/bandera_francia.png)
+* [**Practica-02-Francia**](https://github.com/Zyul203/Banderas_/blob/Practica-02-Francia/app/src/main/java/com/example/banderas_/MainActivity.kt)  -  
 * 
 *  [**Practica-03-Italia**](https://github.com/Zyul203/Banderas_/blob/Practica-03-Italia/app/src/main/java/com/example/banderas_/MainActivity.kt)  -  [IMG: Bandera de Italia](img/bandera_italia.png)
 *  
