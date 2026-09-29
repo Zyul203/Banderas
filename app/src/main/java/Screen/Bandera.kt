@@ -19,7 +19,7 @@ import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 @Composable
-fun BanderaArgentina(modifier: Modifier = Modifier)
+fun BanderaArgentina(modifier: Modifier = Modifier) //
 {
     Column (modifier = modifier.fillMaxSize()) {
         Box(Modifier.weight(1f).fillMaxWidth().background(colorResource(id = R.color.azul_argentina)))
