@@ -38,7 +38,6 @@ fun BanderaJaponC(modifier: Modifier)
             }, contentAlignment = Alignment.Center
         ) {
             Box(modifier = Modifier
-                .align(Alignment.Center)
                 .size(200.dp)
                 .clip(CircleShape)
                 .background(Color.Red))
