@@ -33,6 +33,6 @@ class MainActivity : ComponentActivity()
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaSuiza()
+        BanderaSuiza(modifier = Modifier.fillMaxSize())
     }
 }
