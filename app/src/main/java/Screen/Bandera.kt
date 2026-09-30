@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
@@ -21,24 +23,24 @@ import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 @Composable
-fun Bandera(modifier: Modifier = Modifier)
+fun BanderaTurquia(modifier: Modifier = Modifier)
 {
+    val colorRojo = colorResource(id = R.color.rojo_turquia) //En el Canvas es necesario guardar la funcion en una variable
     Box(modifier = Modifier
-        .fillMaxSize()
-        .background(colorResource(id = R.color.rojo_turquia))
+        .background(colorRojo)
     )
     {
-        Canvas(modifier = modifier.fillMaxSize())
+        Canvas(modifier = modifier.fillMaxSize()) //El modificador fillMaxSize() indica que el lienzo ocupará tdo el ancho y alto disponible en pantalla dentro de su contenedor.
         {
-            drawRect(color = Color(0xFFE30A17)) // fondo rojo
-            val cy = size.height / 2f
-            val rOut = size.height * 0.30f
+            drawRect(color = colorRojo) // Dibuja un rectángulo que cubre tdo el lienzo con el color guardado en colorRojo
+            val cy = size.height / 2f //Centro vertical del lienzo
+            val radio = size.height * 0.30f //Es el radio del círculo
             drawCircle(
-                color = Color.White, radius = rOut,
-                center = Offset(size.width * 0.38f, cy)
+                color = Color.White, radius = radio,
+                center = Offset(size.width * 0.38f, cy) //Centro ubicado horizontalmente al 38& del ancho
             )
             drawCircle(
-                color = Color(0xFFE30A17), radius = size.height * 0.24f,
+                color = colorRojo, radius = size.height * 0.24f,
                 center = Offset(size.width * 0.38f + size.height * 0.09f, cy)
             )
         }
@@ -46,10 +48,11 @@ fun Bandera(modifier: Modifier = Modifier)
         Image(
             painter = painterResource(R.drawable.star_24px),
             contentDescription = "Estrella",
-            modifier = Modifier.size(180.dp).align(Alignment.CenterStart).offset()
-
+            modifier = Modifier
+                .size(120.dp).rotate(45f)
+                .align(BiasAlignment(horizontalBias = 0.1f, verticalBias = 0f))
+                //El BiasAlignment sirve para alinear un elemento dentro de un box
         )
-
     }
 }
 
@@ -57,6 +60,6 @@ fun Bandera(modifier: Modifier = Modifier)
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        Bandera()
+        BanderaTurquia()
     }
 }
