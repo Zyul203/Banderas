@@ -23,14 +23,14 @@ fun BanderaEspana(modifier: Modifier = Modifier)
 {
     Column (modifier = modifier.fillMaxSize()) {
         Box(Modifier.weight(1f).fillMaxWidth().background(colorResource(id = R.color.rojo_espana)))
-        Box(Modifier.weight(2f).fillMaxWidth().background(colorResource(id = R.color.amarillo_espana)), contentAlignment = Alignment.Center)
+        Box(Modifier.weight(2f).fillMaxWidth().background(colorResource(id = R.color.amarillo_espana)))
         {
             Image(
                 painter = painterResource(id = R.drawable.escudo_espana),
                 contentDescription = "Escudo nacional",
                 modifier = Modifier.size(150.dp)
-                    .align(BiasAlignment( horizontalBias = -(0.3f), verticalBias = 0f
-                    )
+                    .align(BiasAlignment( horizontalBias = -(0.33f), verticalBias = 0f
+                    ) //BiasAlignment = Sirve para posicionar o alinear un elemento dentro de un contenedor (como un Box)
                 )//RECOMENDADO: Si es negativo poner entre parentesis.
             )
         }
