@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -27,7 +28,10 @@ fun BanderaEspana(modifier: Modifier = Modifier)
             Image(
                 painter = painterResource(id = R.drawable.escudo_espana),
                 contentDescription = "Escudo nacional",
-                modifier = Modifier.size(150.dp) //RECOMENDADO: Si es negativo poner entre parentesis.
+                modifier = Modifier.size(150.dp)
+                    .align(BiasAlignment( horizontalBias = -(0.3f), verticalBias = 0f
+                    )
+                )//RECOMENDADO: Si es negativo poner entre parentesis.
             )
         }
         Box(Modifier.weight(1f).fillMaxWidth().background(colorResource(id = R.color.rojo_espana)))
