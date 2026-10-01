@@ -27,54 +27,56 @@ import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 
 @Composable
-fun BanderaTurquia(modifier: Modifier = Modifier) {
+fun BanderaTurquia(modifier: Modifier = Modifier)
+{
     ConstraintLayout(modifier = modifier)
     {
         val (fondo,star) = createRefs()
-        val lineaStarVertical = createGuidelineFromStart(.4f)
-        val lineaStarHorizontal = createGuidelineFromTop(.5f)
+        val lineaStarVertical = createGuidelineFromStart(.55f)
+        val lineaStarHorizontal = createGuidelineFromTop(.55f)
         val colorRojo = colorResource(id = R.color.rojo_turquia)
 
         Box(
-            modifier = Modifier.background(colorRojo).constrainAs(fondo)
-            {
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                top.linkTo(parent.top)
-                bottom.linkTo(parent.bottom)
+            modifier = Modifier
+                .background(colorRojo)
+                .constrainAs(fondo)
+                {
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
 
-                height = Dimension.fillToConstraints
-                width = Dimension.fillToConstraints
-            })
-        {
-            Canvas(modifier = modifier.fillMaxSize()) //El modificador fillMaxSize() indica que el lienzo ocupará tdo el ancho y alto disponible en pantalla dentro de su contenedor.
-            {
-                drawRect(color = colorRojo) // Dibuja un rectángulo que cubre tdo el lienzo con el color guardado en colorRojo
-                val cy = size.height / 2f //Centro vertical del lienzo
-                val radio = size.height * 0.30f //Es el radio del círculo
-                drawCircle(
-                    color = Color.White, radius = radio,
-                    center = Offset(
-                        size.width * 0.38f,
-                        cy
-                    ) //Centro ubicado horizontalmente al 38& del ancho
-                )
-                drawCircle(
-                    color = colorRojo, radius = size.height * 0.24f,
-                    center = Offset(size.width * 0.38f + size.height * 0.09f, cy)
-                )
-            }
+                    height = Dimension.fillToConstraints
+                    width = Dimension.fillToConstraints
+                }
+        )   {
+                Canvas(modifier = modifier.fillMaxSize()) //El modificador fillMaxSize() indica que el lienzo ocupará tdo el ancho y alto disponible en pantalla dentro de su contenedor.
+                {
+                    drawRect(color = colorRojo) // Dibuja un rectángulo que cubre tdo el lienzo con el color guardado en colorRojo
+                    val cy = size.height / 2f //Centro vertical del lienzo
+                    val radio = size.height * 0.30f //Es el radio del círculo
+                    drawCircle(
+                        color = Color.White, radius = radio,
+                        center = Offset(
+                            size.width * 0.38f,
+                            cy
+                        ) //Centro ubicado horizontalmente al 38& del ancho
+                    )
+                    drawCircle(
+                        color = colorRojo, radius = size.height * 0.24f,
+                        center = Offset(size.width * 0.38f + size.height * 0.09f, cy)
+                    )
+                }
         }
-        // 2. La Estrella alineada con las líneas guía de ConstraintLayout
-        Image(
+
+        Image( //ESTRELLA
             painter = painterResource(R.drawable.star_24px),
             contentDescription = "Estrella",
             modifier = Modifier
                 .size(120.dp)
                 .rotate(45f)
                 .constrainAs(star) {
-                    // Anclamos arriba, abajo, izquierda y derecha a las Guías
-                    // para que el CENTRO de la estrella coincida con el cruce de guías
+                    // Anclamos arriba, abajo, izquierda y derecha a las Guías para que el CENTRO de la estrella coincida con el cruce de guías
                     top.linkTo(lineaStarHorizontal)
                     bottom.linkTo(lineaStarHorizontal)
                     start.linkTo(lineaStarVertical)
