@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BanderaIsrael(modifier = Modifier.padding(innerPadding),)
+                    BanderaIsrael(modifier = Modifier.fillMaxSize().padding(innerPadding),)
                 }
             }
         }
@@ -33,6 +33,6 @@ class MainActivity : ComponentActivity()
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaIsrael()
+        BanderaIsrael(modifier = Modifier.fillMaxSize())
     }
 }

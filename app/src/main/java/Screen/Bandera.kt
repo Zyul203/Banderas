@@ -1,23 +1,19 @@
 package Screen
 
 import Components.EstrellaCanvas
-import Components.trianglePath
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.foundation.Canvas // IMPORTANTE: Usar foundation.Canvas
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.unit.dp
 import com.example.banderas.R
-import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 
 
 /*
@@ -26,46 +22,55 @@ píxeles de bajo nivel.
 
 androidx.compose.foundation.Canvas es el componente gráfico/Composable
 que debes usar para dibujar en la pantalla.
-
 */
 
 @Composable
-fun BanderaIsrael(modifier: Modifier = Modifier)
+fun BanderaIsrael(modifier: Modifier)
 {
-    val colorAzul = colorResource(id = R.color.azul_israel)
-    Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
+    ConstraintLayout(modifier = modifier)
+    {
+        val (azulSup, blanco, azulInf) = createRefs()
+        val lineSup = createGuidelineFromTop(0.15625f)
+        val lineInf = createGuidelineFromBottom(0.15625f)
+        val colorAzul = colorResource(id = R.color.azul_israel)
 
-
-        Column(modifier = Modifier.fillMaxSize())
+        Box(modifier = Modifier.background(colorAzul).constrainAs(azulSup)
         {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .weight(0.15625f)
-                    .background(colorAzul)
-            )
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(parent.top)
+            bottom.linkTo(lineSup)
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .weight(0.6875f)
-                    .background(Color.White), contentAlignment = Alignment.Center
-            ) {
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        })
 
-            }
+        Box(modifier = Modifier.background(Color.White).constrainAs(blanco)
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(lineSup)
+            bottom.linkTo(lineInf)
 
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .weight(0.15625f)
-                    .background(colorAzul)
-            )
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+
+        },  contentAlignment = Alignment.Center)
+        {
+            EstrellaCanvas() //FUNCION DE Componentes.kt
         }
 
-        EstrellaCanvas() //FUNCION DE Componentes.kt
+
+        Box(modifier = Modifier.background(colorAzul).constrainAs(azulInf)
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(lineInf)
+            bottom.linkTo(parent.bottom)
+
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        })
     }
 }
 
@@ -75,6 +80,6 @@ fun BanderaIsrael(modifier: Modifier = Modifier)
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        BanderaIsrael()
+        BanderaIsrael(modifier = Modifier.fillMaxSize())
     }
 }
