@@ -65,7 +65,6 @@ fun BanderaIsrael(modifier: Modifier = Modifier)
 }
 
 
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun BanderaPreview() {
