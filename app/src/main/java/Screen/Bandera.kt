@@ -60,7 +60,7 @@ fun BanderaIsrael(modifier: Modifier = Modifier)
             )
         }
 
-        EstrellaCanvas() //FUNCION DE Componentes.kt
+        EstrellaCanvas() //FUNCION DE Componentes.kt .
     }
 }
 
