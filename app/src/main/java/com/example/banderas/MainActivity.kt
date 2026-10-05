@@ -36,3 +36,12 @@ fun BanderaPreview() {
         BanderaCuba()
     }
 }
+
+/* NOTAS IMPORTANTES
+* enableEdgeToEdge() despliega en pantalla completa:
+    Esta función de Android le ordena a la aplicación extenderse por debajo de las barras del sistema
+    (donde está la hora, batería, cámara "notch" y la barra de navegación inferior).
+* Scaffold y innerPadding te protegen de esas áreas:
+    Para evitar que tu diseño choque o se quede tapado por la hora o la batería,
+    el contenedor Scaffold en el MainActivity te calcula una zona segura llamada innerPadding
+ */

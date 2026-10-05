@@ -2,49 +2,66 @@ package Screen
 
 import Components.Estrella
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.ui.graphics.Path //ESTE LO IMPORTAS MANUALMENTE
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 
 
 @Composable
 fun BanderaCuba(modifier : Modifier = Modifier)
 {
-    ConstraintLayout(modifier = Modifier.fillMaxSize())
-    {
-        val (franjas, trianguloRojo) = createRefs()
-
-        val alturaT = createGuidelineFromStart(0.38f)
-        val centroS_v =
-
-    }
     val colorRojo = colorResource(id = R.color.rojo_cuba)
     val colorAzul = colorResource(id = R.color.azul_cuba)
 
-    Box(modifier = Modifier.fillMaxSize())
+    ConstraintLayout(modifier = modifier.fillMaxSize()) //A. IMPORTANTE
     {
-        Canvas(modifier = modifier.fillMaxSize())
-        {
-            val triWidth = size.width * 0.38f //ALTURA DEL TRIANGULO (Es width porque el triángulo está acostado)
-            val band = size.height / 5f //MEDIDA DE LAS FRANJAS
+        val (franjas, trianguloRojo) = createRefs()
 
-            for (i in 0 until 5) {
-                if (i % 2 == 0)
-                    drawRect(
-                        color = colorAzul,
-                        topLeft = Offset(0f, i * band),
-                        size = Size(size.width, band)
-                    )
+        Column (modifier = Modifier.constrainAs(franjas)
+        {
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+
+            width = Dimension.fillToConstraints
+            height = Dimension.fillToConstraints
+
+        }) {
+            repeat(5) { index ->
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxSize()
+                        .background(
+                            if (index % 2 == 0) colorAzul else Color.White
+                        )
+                )
             }
+        }
+
+        Canvas(modifier = Modifier.constrainAs(trianguloRojo)
+        {
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+
+            width = Dimension.fillToConstraints
+            height = Dimension.fillToConstraints
+        }){
+            val triWidth = size.width * 0.38f //ALTURA DEL TRIANGULO (Es width porque el triángulo está acostado)
 
             val trianglePath = Path().apply {
                 moveTo(0f, 0f)
@@ -53,11 +70,10 @@ fun BanderaCuba(modifier : Modifier = Modifier)
                 close()
             }
             drawPath(trianglePath, color = colorRojo)
-
         }
-
-        Estrella()
     }
+
+    Estrella()
 }
 
 
@@ -70,6 +86,23 @@ fun BanderaPreview() {
 }
 
 /* NOTAS PERSONALES
+
+IMPORTANTE: ########################
+* size.width y size.height son PROPIEDADES EXCLUSIVAS del CANVAS
+# El primer componente raíz dentro de cualquier función @Composable siempre debe aplicar el modifier recibido por parámetro (modifier = modifier)
+    para encadenar las instrucciones que le imponga la pantalla superior.
+# Modifier (Con "M" Mayúscula)
+    Es la clase / objeto global que provee Jetpack Compose. Se utiliza cuando vas a crear una lista nueva de modificaciones desde cero.
+    Uso típico: Para configurar propiedades directamente a componentes internos (Box, Text, Image, Canvas) o para valores iniciales por defecto
+# 2. modifier (Con "m" minúscula)
+    Es el nombre del parámetro (variable) que recibe tu función @Composable desde el componente que la mandó llamar. Contiene las configuraciones externas que se calcularon afuera
+    (como el tamaño disponible o el innerPadding del Scaffold para evitar tapar la hora/batería)
+
+Si uso " = Modifier. " en el Constraint al correr la app en el cel me ocupara toda la pantalla incluyendo los notch
+Si uso " = modifier. " ocupara toda la pantalla a excepcion de los notch
+
+
+--------------------------------------------------------------------------------------
 1. val band = size.height / 5f: Divide la altura total disponible del Canvas (size.height) entre 5 para calcular el alto exacto que
 tendrá cada una de las 5 franjas horizontales.
 
@@ -89,7 +122,4 @@ Asegura que el rectángulo abarque tdo el ancho de la pantalla (size.width) y te
 6. drawPath
 La función drawPath dentro de un Canvas en Jetpack Compose sirve para renderizar (dibujar)
     en la pantalla una figura geométrica personalizada o trazo complejo
-
-IMPORTANTE:
-*size.width y size.height son PROPIEDADES EXCLUSIVAS del CANVAS
  */
