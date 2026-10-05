@@ -10,7 +10,10 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path //Agregar manualmente
 import androidx.compose.ui.res.colorResource
+import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.banderas.R
+import androidx.constraintlayout.compose.Dimension //Agregar manualmente
+
 
 
 @Composable
@@ -22,58 +25,73 @@ fun BanderaSeychelles(modifier : Modifier = Modifier)
     val blanco = Color.White
     val verde = colorResource(id = R.color.verde_seychelles)
 
-    Canvas( modifier = modifier
-            .fillMaxSize()
-    ) {
-        val w = size.width   // Ancho del Canvas en píxeles
-        val h = size.height  // Alto del Canvas en píxeles
-        val vertice = Offset(0f, h) // Vértice único de origen
+    ConstraintLayout(modifier = modifier.fillMaxSize())
+    {
+        val canvasBandera = createRef()
 
-        // 1. FIGURA AZUL
-        val pathAzul = Path().apply {
-            moveTo(vertice.x, vertice.y)
-            lineTo(0f, 0f)
-            lineTo(w / 3f, 0f)
-            close()                             //La función close() de la clase Path sirve para cerrar automáticamente la figura geométrica dibujando una línea recta final
-        }
-        drawPath(path = pathAzul, color = azul)
+        Canvas(modifier = modifier
+            .constrainAs(canvasBandera)
+            {
+                top.linkTo(parent.top)
+                bottom.linkTo(parent.bottom)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
 
-        // 2. FIGURA AMARILLA
-        val pathAmarillo = Path().apply {
-            moveTo(vertice.x, vertice.y)
-            lineTo(w / 3f, 0f)
-            lineTo((2f * w) / 3f, 0f)
-            close()
-        }
-        drawPath(path = pathAmarillo, color = amarillo)
+                width = Dimension.fillToConstraints
+                height = Dimension.fillToConstraints
+            }
+        ) {
+            val w = size.width   // Ancho del Canvas en píxeles
+            val h = size.height  // Alto del Canvas en píxeles
+            val vertice = Offset(0f, h) // Vértice único de origen
 
-        // 3. FIGURA ROJO
-        val pathRojo = Path().apply {
-            moveTo(vertice.x, vertice.y)
-            lineTo((2f * w) / 3f, 0f)  // 1. EsquinaSup: x = 2/3 del ancho
-            lineTo(w, 0f)              // Vértice: x = El punto final del ANCHO
-            lineTo(w, h / 3f)          // 1° EsquinaDer: y = 1/3 de la altura
-            close()
-        }
-        drawPath(path = pathRojo, color = rojo)
+            // 1. FIGURA AZUL
+            val pathAzul = Path().apply {
+                moveTo(vertice.x, vertice.y)
+                lineTo(0f, 0f)
+                lineTo(w / 3f, 0f)
+                close()                             //La función close() de la clase Path sirve para cerrar automáticamente la figura geométrica dibujando una línea recta final
+            }
+            drawPath(path = pathAzul, color = azul)
 
-        // 4. FIGURA BLANCO
-        val pathBlanco = Path().apply {
-            moveTo(vertice.x, vertice.y)
-            lineTo(w, h / 3f)                 // 1° Esquina: y = 1/3 de la altura
-            lineTo(w, (2f * h) / 3f)          // 2° Esquina: y = 2/3 de la altura
-            close()
-        }
-        drawPath(path = pathBlanco, color = blanco)
+            // 2. FIGURA AMARILLA
+            val pathAmarillo = Path().apply {
+                moveTo(vertice.x, vertice.y)
+                lineTo(w / 3f, 0f)
+                lineTo((2f * w) / 3f, 0f)
+                close()
+            }
+            drawPath(path = pathAmarillo, color = amarillo)
 
-        // 5. FIGURA VERDE
-        val pathVerde = Path().apply {
-            moveTo(vertice.x, vertice.y)
-            lineTo(w, (2f * h) / 3f)   // 1° Esquina: y = 2/3 de la altura
-            lineTo(w, h)               // 2° Esquina: y = La altura completa
-            close()
+            // 3. FIGURA ROJO
+            val pathRojo = Path().apply {
+                moveTo(vertice.x, vertice.y)
+                lineTo((2f * w) / 3f, 0f)  // 1. EsquinaSup: x = 2/3 del ancho
+                lineTo(w, 0f)              // Vértice: x = El punto final del ANCHO
+                lineTo(w, h / 3f)          // 1° EsquinaDer: y = 1/3 de la altura
+                close()
+            }
+            drawPath(path = pathRojo, color = rojo)
+
+            // 4. FIGURA BLANCO
+            val pathBlanco = Path().apply {
+                moveTo(vertice.x, vertice.y)
+                lineTo(w, h / 3f)                 // 1° Esquina: y = 1/3 de la altura
+                lineTo(w, (2f * h) / 3f)          // 2° Esquina: y = 2/3 de la altura
+                close()
+            }
+            drawPath(path = pathBlanco, color = blanco)
+
+            // 5. FIGURA VERDE
+            val pathVerde = Path().apply {
+                moveTo(vertice.x, vertice.y)
+                lineTo(w, (2f * h) / 3f)   // 1° Esquina: y = 2/3 de la altura
+                lineTo(w, h)               // 2° Esquina: y = La altura completa
+                close()
+            }
+            drawPath(path = pathVerde, color = verde)
         }
-        drawPath(path = pathVerde, color = verde)
+
     }
 }
 
