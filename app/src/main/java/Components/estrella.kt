@@ -14,16 +14,9 @@ import com.example.banderas.R
 @Composable
 fun Estrella(modifier: Modifier = Modifier)
 {
-    Box(modifier = Modifier.fillMaxSize())
-    {
         Image(
             painter = painterResource(id = R.drawable.star_24px),
             contentDescription = "Estrella",
-            modifier = Modifier.size(100.dp).align(BiasAlignment((-(0.7f)),(0.05f)))
+            modifier = Modifier.size(100.dp)
         )
-    }
 }
-
-/*
-Recuerda que BiasAlignment necesita un box para usarse, ademas que sus valores van del -1f al 1f
- */

@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Path //ESTE LO IMPORTAS MANUALMENTE
 @Composable
 fun BanderaCuba(modifier : Modifier = Modifier)
 {
+
     val colorRojo = colorResource(id = R.color.rojo_cuba)
     val colorAzul = colorResource(id = R.color.azul_cuba)
 
