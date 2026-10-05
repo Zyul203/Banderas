@@ -13,12 +13,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.R
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.ui.graphics.Path //ESTE LO IMPORTAS MANUALMENTE
+import androidx.constraintlayout.compose.ConstraintLayout
 
 
 @Composable
 fun BanderaCuba(modifier : Modifier = Modifier)
 {
+    ConstraintLayout(modifier = Modifier.fillMaxSize())
+    {
+        val (franjas, trianguloRojo) = createRefs()
 
+        val alturaT = createGuidelineFromStart(0.38f)
+        val centroS_v =
+
+    }
     val colorRojo = colorResource(id = R.color.rojo_cuba)
     val colorAzul = colorResource(id = R.color.azul_cuba)
 
