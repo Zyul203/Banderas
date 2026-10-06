@@ -13,26 +13,22 @@ import androidx.compose.ui.unit.dp
 import com.example.banderas.R
 
 @Composable
-fun Estrellas (modifier : Modifier = Modifier, size : Dp, biasX : Float, biasY : Float)
+fun Estrellas (modifier : Modifier = Modifier, size : Dp)
 {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = R.drawable.star_24px),
-            contentDescription = "Estrellas",
-            modifier = Modifier.size(size).align(BiasAlignment(biasX, biasY))
-        )
-    }
+    Image(
+        painter = painterResource(id = R.drawable.star_24px),
+        contentDescription = "Estrellas",
+        modifier = modifier.size(size)
+    )
 }
 
 @Composable
-fun Escudo (modifier: Modifier = Modifier, biasX: Float, biasY: Float)
+fun Escudo (modifier: Modifier = Modifier)
 {
-    Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(id = R.drawable.escudo_papuanuevaguinea),
-            contentDescription = "Estrellas",
-            modifier = Modifier.size(225.dp).align(BiasAlignment(biasX, biasY))
-        )
-    }
+    Image(
+        painter = painterResource(id = R.drawable.escudo_papuanuevaguinea),
+        contentDescription = "Estrellas",
+        modifier = modifier.size(225.dp)
+    )
 }
 
