@@ -19,8 +19,7 @@ import com.example.banderas.R
 @Composable
 fun Bandera(modifier : Modifier = Modifier) {
     val azul = colorResource(id = R.color.azul_reino)
-
-
+    
     Box(modifier = Modifier.fillMaxSize().background(azul))
     {
         Canvas(modifier = Modifier.fillMaxSize())
@@ -32,9 +31,9 @@ fun Bandera(modifier : Modifier = Modifier) {
             val strokeDiagonal_Roja = 50f
             val strokeCruz_Rojo = 120f
 
-            // ----- TACHA ---------------------------------
+            // ----- DIAGONALES ---------------------------------
 
-            // 1. Diagonal de esquina superior izquierda a inferior derecha
+            // 1. Diagonal Superior-Izquierda a Inferior-Derecha
             drawLine(
                 color = Color.White,
                 start = Offset(0f, 0f),
@@ -43,7 +42,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square // Extiende los bordes para cubrir tdo el margen
             )
 
-            // 2. Diagonal de esquina inferior izquierda a superior derecha
+            // 2. Diagonal Inferior-Izquierda a Superior-Derecha
             drawLine(
                 color = Color.White,
                 start = Offset(0f, h),
@@ -52,6 +51,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
+            // 1. Diagonal Superior-Izquierda a Inferior-Derecha
             drawLine(
                 color = Color.Red,
                 start = Offset(0f, 0f),
@@ -60,7 +60,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
-            // 6. Diagonal roja (inferior izquierda a superior derecha)
+            // 2. Diagonal Inferior-Izquierda a Superior-Derecha
             drawLine(
                 color = Color.Red,
                 start = Offset(0f, h),
@@ -69,7 +69,8 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
-            // 3. Cruz central vertical
+            //------ CRUZ -------------------------------------------------
+            // 1. Cruz central vertical
             drawLine(
                 color = Color.White,
                 start = Offset(w / 2f, 0f),
@@ -78,7 +79,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
-            // 4. Cruz central horizontal
+            // 2. Cruz central horizontal
             drawLine(
                 color = Color.White,
                 start = Offset(0f, h / 2f),
@@ -87,14 +88,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
-// ==========================================
-            // LÍNEAS ROJAS (SUPERPUESTAS)
-            // ==========================================
-
-            // 5. Diagonal roja (superior izquierda a inferior derecha)
-
-
-            // 7. Cruz central roja vertical
+            // 1. Cruz central roja vertical
             drawLine(
                 color = Color.Red,
                 start = Offset(w / 2f, 0f),
@@ -103,7 +97,7 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
 
-            // 8. Cruz central roja horizontal
+            // 2. Cruz central roja horizontal
             drawLine(
                 color = Color.Red,
                 start = Offset(0f, h / 2f),
@@ -112,7 +106,6 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square
             )
         }
-
     }
 }
 
