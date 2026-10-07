@@ -32,10 +32,15 @@ fun BanderaIsrael(modifier: Modifier = Modifier)
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-
-
         Column(modifier = Modifier.fillMaxSize())
         {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .weight(0.09375f)
+                    .background(Color.White)
+            )
+
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -48,15 +53,20 @@ fun BanderaIsrael(modifier: Modifier = Modifier)
                     .fillMaxSize()
                     .weight(0.6875f)
                     .background(Color.White), contentAlignment = Alignment.Center
-            ) {
-
-            }
+            ) {}
 
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .weight(0.15625f)
                     .background(colorAzul)
+            )
+
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .weight(0.09375f)
+                    .background(Color.White)
             )
         }
 
