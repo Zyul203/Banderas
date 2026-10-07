@@ -15,26 +15,6 @@ import com.example.banderas.R
 @Composable
 fun Bandera(modifier : Modifier = Modifier)
 {
-    val verde = colorResource(id = R.color.verde_sudafrica)
-
-    Canvas(modifier = modifier.fillMaxSize().background(Color.Black))
-    {
-        val apex = Offset(size.width * 0.36f, size.height / 2f)
-        drawLine(Color.White, Offset(0f, 0f), apex, size.height * 0.30f)
-        drawLine(Color.White, Offset(0f, size.height), apex, size.height * 0.30f)
-        drawLine(Color.White, apex, Offset(size.width, size.height * 0.14f), size.height * 0.30f)
-        drawLine(Color.White, apex, Offset(size.width, size.height * 0.86f), size.height * 0.30f)
-
-
-        drawLine(verde, Offset(0f, 0f), apex, (size.height * 0.30f) * 0.8f)
-        drawLine(verde, Offset(0f, size.height), apex, (size.height * 0.30f) * 0.8f)
-        drawLine(verde, apex, Offset(size.width, size.height * 0.14f), size.height * 0.30f)
-        drawLine(verde, apex, Offset(size.width, size.height * 0.86f), size.height * 0.30f)
-
-
-// Repetir las 4 lineas anteriores con Color verde y grosor menor (0.20f) encima
-// Luego el triangulo negro del asta con drawPath
-    }
 }
 
 
