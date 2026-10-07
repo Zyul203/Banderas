@@ -11,18 +11,42 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.platform.isDebugInspectorInfoEnabled
 import androidx.compose.ui.res.colorResource
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.example.banderas.R
 
 
 @Composable
 fun Bandera(modifier : Modifier = Modifier) {
     val azul = colorResource(id = R.color.azul_reino)
-    
-    Box(modifier = Modifier.fillMaxSize().background(azul))
+
+    ConstraintLayout (modifier = Modifier.fillMaxSize().background(azul))
     {
-        Canvas(modifier = Modifier.fillMaxSize())
+        val canvasBandera = createRef()
+        val linea = createRef()
+
+        Box(modifier = modifier.fillMaxSize().background(Color.Black).constrainAs(linea))
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        }
+
+        Canvas(modifier = modifier.constrainAs(canvasBandera)
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
+
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        })
         {
             val w = size.width
             val h = size.height
@@ -30,6 +54,9 @@ fun Bandera(modifier : Modifier = Modifier) {
             val strokeCruz_Blanca = 250f
             val strokeDiagonal_Roja = 50f
             val strokeCruz_Rojo = 120f
+
+            val lineY = createGuidelineFromStart(0.5f)
+            val lineX = createGuidelineFromTop(0.5f)
 
             // ----- DIAGONALES ---------------------------------
 
