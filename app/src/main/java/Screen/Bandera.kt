@@ -29,28 +29,42 @@ fun BanderaIsrael(modifier: Modifier)
 {
     ConstraintLayout(modifier = modifier)
     {
-        val (azulSup, blanco, azulInf) = createRefs()
-        val lineSup = createGuidelineFromTop(0.15625f)
-        val lineInf = createGuidelineFromBottom(0.15625f)
+        val (blancoSup, azulSup, blancoCentral, azulInf, blancoInf) = createRefs()
+        val line4 = createGuidelineFromTop(0.09375f)
+        val line3 = createGuidelineFromTop(0.25f)
+        val line2 = createGuidelineFromBottom(0.25f)
+        val line1 = createGuidelineFromBottom(0.09375f)
+
         val colorAzul = colorResource(id = R.color.azul_israel)
 
-        Box(modifier = Modifier.background(colorAzul).constrainAs(azulSup)
+        Box(modifier = Modifier.background(Color.White).constrainAs(blancoSup)
         {
             start.linkTo(parent.start)
             end.linkTo(parent.end)
             top.linkTo(parent.top)
-            bottom.linkTo(lineSup)
+            bottom.linkTo(line4)
 
             height = Dimension.fillToConstraints
             width = Dimension.fillToConstraints
         })
 
-        Box(modifier = Modifier.background(Color.White).constrainAs(blanco)
+        Box(modifier = Modifier.background(colorAzul).constrainAs(azulSup)
         {
             start.linkTo(parent.start)
             end.linkTo(parent.end)
-            top.linkTo(lineSup)
-            bottom.linkTo(lineInf)
+            top.linkTo(line4)
+            bottom.linkTo(line3)
+
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        })
+
+        Box(modifier = Modifier.background(Color.White).constrainAs(blancoCentral)
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(line3)
+            bottom.linkTo(line2)
 
             height = Dimension.fillToConstraints
             width = Dimension.fillToConstraints
@@ -65,7 +79,18 @@ fun BanderaIsrael(modifier: Modifier)
         {
             start.linkTo(parent.start)
             end.linkTo(parent.end)
-            top.linkTo(lineInf)
+            top.linkTo(line2)
+            bottom.linkTo(line1)
+
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        })
+
+        Box(modifier = Modifier.background(Color.White).constrainAs(blancoInf)
+        {
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            top.linkTo(line1)
             bottom.linkTo(parent.bottom)
 
             height = Dimension.fillToConstraints
