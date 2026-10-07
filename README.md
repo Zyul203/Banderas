@@ -20,4 +20,26 @@
 
 *  [**IMG: Bandera de Estados Unidos**](img/bandera_eua.png):  [*Practica-10-Estados Unidos*](https://github.com/Zyul203/Banderas/blob/Practica-10-EstadosUnidos/app/src/main/java/Screen/Bandera.kt) | [*Practica-10-Estados Unidos_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-10-EstadosUnidos_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Chile**](img/bandera_chile.png):  [*Practica-11-Chile - OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile/app/src/main/java/Screen/Bandera.kt) | [*Practica-11-Chile_Constraint OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile_Constraint/app/src/main/java/Screen/Bandera.kt)
+*  [**IMG: Bandera de Chile**](img/bandera_chile.png):  [*Practica-Chile - OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile/app/src/main/java/Screen/Bandera.kt) | [*Practica-Chile_Constraint OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile_Constraint/app/src/main/java/Screen/Bandera.kt)
+
+*  [**IMG: Bandera de Suiza**](img/bandera_suiza.png):  [*Practica-11-Suiza*]() | [*Practica-11-Suiza_Constraint*]()
+
+*  [**IMG: Bandera de Turquia**](img/bandera_turquia.png):  [*Practica-12-Turqia*]() | [*Practica-12-Turquia_Constraint*]()
+
+*  [**IMG: Bandera de Israel**](img/bandera_israel.png):  [*Practica-13-Israel*]() | [*Practica-13-Israel_Constraint*]()
+
+*  [**IMG: Bandera de Cuba**](img/bandera_cuba.png):  [*Practica-14-Cuba*]() | [*Practica-14-Cuba_Constraint*]()
+
+*  [**IMG: Bandera de Seychelles**](img/bandera_seychelles.png):  [*Practica-15-Seychelles*]() | [*Practica-15-Seychelles_Constraint*]()
+   
+*  [**IMG: Bandera de Papua Nueva Guinea**](img/bandera_papua.png):  [*Practica-16-Papua Nueva Guinea*]() | [*Practica-16-Papua Nueva Guinea_Constraint*]()
+
+*  [**IMG: Bandera de Reino Unido**](img/bandera_reino.png):  [*Practica-17-Reino Unido*]() | [*Practica-17-Reino Unido_Constraint*]()
+
+ *  [**IMG: Bandera de Sudáfrica**](img/bandera_sudafrica.png):  [*Practica-18-Sudáfrica*]() | [*Practica-18-Sudáfrica_Constraint*]()
+
+ *  [**IMG: Bandera de Bután**](img/bandera_butan.png):  [*Practica-19-Bután*]() | [*Practica-19-Bután_Constraint*]()
+
+ *  [**IMG: Bandera de Nepal**](img/bandera_nepal.png):  [*Practica-20-Nepal*]() | [*Practica-20-Nepal_Constraint*]()
+
+
