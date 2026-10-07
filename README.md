@@ -20,4 +20,4 @@
 
 *  [**IMG: Bandera de Estados Unidos**](img/bandera_eua.png):  [*Practica-10-Estados Unidos*](https://github.com/Zyul203/Banderas/blob/Practica-10-EstadosUnidos/app/src/main/java/Screen/Bandera.kt) | [*Practica-10-Estados Unidos_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-10-EstadosUnidos_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Chile**](img/bandera_chile.png):  [*Practica-11-Chile*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile/app/src/main/java/Screen/Bandera.kt) | [*Practica-11-Chile_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile_Constraint/app/src/main/java/Screen/Bandera.kt)
+*  [**IMG: Bandera de Chile**](img/bandera_chile.png):  [*Practica-11-Chile - OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile/app/src/main/java/Screen/Bandera.kt) | [*Practica-11-Chile_Constraint OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile_Constraint/app/src/main/java/Screen/Bandera.kt)
