@@ -18,7 +18,7 @@ import androidx.constraintlayout.compose.Dimension
 
 /*
 androidx.compose.ui.graphics.Canvas es una interfaz interna para dibujar
-píxeles de bajo nivel.
+píxeles de bajo nivel
 
 androidx.compose.foundation.Canvas es el componente gráfico/Composable
 que debes usar para dibujar en la pantalla.
