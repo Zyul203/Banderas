@@ -22,19 +22,19 @@
 
 *  [**IMG: Bandera de Chile**](img/bandera_chile.png):  [*Practica-Chile - OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile/app/src/main/java/Screen/Bandera.kt) | [*Practica-Chile_Constraint OPCIONAL*](https://github.com/Zyul203/Banderas/blob/Practica-11-Chile_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Suiza**](img/bandera_suiza.png):  [*Practica-11-Suiza*]() | [*Practica-11-Suiza_Constraint*]()
+*  [**IMG: Bandera de Suiza**](img/bandera_suiza.png):  [*Practica-11-Suiza*](https://github.com/Zyul203/Banderas/blob/Practica-11-Suiza/app/src/main/java/Screen/Bandera.kt) | [*Practica-11-Suiza_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-11-Suiza_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Turquia**](img/bandera_turquia.png):  [*Practica-12-Turqia*]() | [*Practica-12-Turquia_Constraint*]()
+*  [**IMG: Bandera de Turquia**](img/bandera_turquia.png):  [*Practica-12-Turqia*](https://github.com/Zyul203/Banderas/blob/Practica-12-Turquia/app/src/main/java/Screen/Bandera.kt) | [*Practica-12-Turquia_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-12-Turquia_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Israel**](img/bandera_israel.png):  [*Practica-13-Israel*]() | [*Practica-13-Israel_Constraint*]()
+*  [**IMG: Bandera de Israel**](img/bandera_israel.png):  [*Practica-13-Israel*](https://github.com/Zyul203/Banderas/blob/Practica-13-Israel/app/src/main/java/Screen/Bandera.kt) | [*Practica-13-Israel_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-13-Israel_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Cuba**](img/bandera_cuba.png):  [*Practica-14-Cuba*]() | [*Practica-14-Cuba_Constraint*]()
+*  [**IMG: Bandera de Cuba**](img/bandera_cuba.png):  [*Practica-14-Cuba*](https://github.com/Zyul203/Banderas/blob/Practica-14-Cuba/app/src/main/java/Screen/Bandera.kt) | [*Practica-14-Cuba_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-14-Cuba_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Seychelles**](img/bandera_seychelles.png):  [*Practica-15-Seychelles*]() | [*Practica-15-Seychelles_Constraint*]()
+*  [**IMG: Bandera de Seychelles**](img/bandera_seychelles.png):  [*Practica-15-Seychelles*](https://github.com/Zyul203/Banderas/blob/Practica-15-Seychelles/app/src/main/java/Screen/Bandera.kt) | [*Practica-15-Seychelles_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-15-Seychelles_Constraint/app/src/main/java/Screen/Bandera.kt)
    
-*  [**IMG: Bandera de Papua Nueva Guinea**](img/bandera_papua.png):  [*Practica-16-Papua Nueva Guinea*]() | [*Practica-16-Papua Nueva Guinea_Constraint*]()
+*  [**IMG: Bandera de Papua Nueva Guinea**](img/bandera_papua.png):  [*Practica-16-Papua Nueva Guinea*](https://github.com/Zyul203/Banderas/blob/Practica-16-PapuaNuevaGuinea/app/src/main/java/Screen/Bandera.kt) | [*Practica-16-Papua Nueva Guinea_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-16-PapuaNuevaGuinea_Constraint/app/src/main/java/Screen/Bandera.kt)
 
-*  [**IMG: Bandera de Reino Unido**](img/bandera_reino.png):  [*Practica-17-Reino Unido*]() | [*Practica-17-Reino Unido_Constraint*]()
+*  [**IMG: Bandera de Reino Unido**](img/bandera_reino.png):  [*Practica-17-Reino Unido*](https://github.com/Zyul203/Banderas/blob/Practica-17-ReinoUnido/app/src/main/java/Screen/Bandera.kt) | [*Practica-17-Reino Unido_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-17-ReinoUnido_Constraint/app/src/main/java/Screen/Bandera.kt)
 
  *  [**IMG: Bandera de Sudáfrica**](img/bandera_sudafrica.png):  [*Practica-18-Sudáfrica*]() | [*Practica-18-Sudáfrica_Constraint*]()
 
