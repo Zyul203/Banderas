@@ -15,7 +15,7 @@ fun Escudo (modifier: Modifier = Modifier)
         Image(
             painter = painterResource(id = R.drawable.butan_dragon),
             contentDescription = "Estrellas",
-            modifier = modifier.size(400.dp).rotate(0f)
+            modifier = modifier.size(400.dp)
         )
 }
 

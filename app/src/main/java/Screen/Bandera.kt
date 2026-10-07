@@ -6,21 +6,25 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.res.colorResource
 import com.example.banderas.R
+import androidx.constraintlayout.compose.ConstraintLayout
+
 
 @Composable
 fun Bandera(modifier : Modifier = Modifier)
 {
     val amarillo = colorResource(id = R.color.amarillo_butan)
-    val naranja = colorResource(id =R.color.naranja_butan)
+    val naranja = colorResource(id = R.color.naranja_butan)
 
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center)
+    ConstraintLayout (modifier = Modifier.fillMaxSize())
     {
+        val (dragon) = createRefs()
+        val linex = createGuidelineFromStart(0.5f)
+        val liney = createGuidelineFromTop(0.5f)
+
         Canvas(modifier = modifier.fillMaxSize())
         {
             val w = size.width
@@ -42,7 +46,13 @@ fun Bandera(modifier : Modifier = Modifier)
             drawPath(path = pathNaranja, color = naranja)
         }
 
-        Escudo()
+        Escudo(modifier = Modifier.constrainAs(dragon)
+        {
+            start.linkTo(linex)
+            end.linkTo(linex)
+            top.linkTo(liney)
+            bottom.linkTo(liney)
+        })
     }
 }
 
