@@ -12,6 +12,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import com.example.banderas.R
@@ -24,18 +25,14 @@ fun Bandera(modifier : Modifier = Modifier) {
     ConstraintLayout (modifier = Modifier.fillMaxSize().background(azul))
     {
         val canvasBandera = createRef()
-        val linea = createRef()
 
-        Box(modifier = modifier.fillMaxSize().background(Color.Black).constrainAs(linea))
-        {
-            start.linkTo(parent.start)
-            end.linkTo(parent.end)
-            top.linkTo(parent.top)
-            bottom.linkTo(parent.bottom)
 
-            height = Dimension.fillToConstraints
-            width = Dimension.fillToConstraints
-        }
+        val ( cruzBlancaVert, cruzBlancaHoriz,
+            cruzRojaVert, cruzRojaHoriz) = createRefs()
+
+        val lineY = createGuidelineFromTop(0.5f)
+        val lineX = createGuidelineFromStart(0.5f)
+
 
         Canvas(modifier = modifier.constrainAs(canvasBandera)
         {
@@ -55,8 +52,6 @@ fun Bandera(modifier : Modifier = Modifier) {
             val strokeDiagonal_Roja = 50f
             val strokeCruz_Rojo = 120f
 
-            val lineY = createGuidelineFromStart(0.5f)
-            val lineX = createGuidelineFromTop(0.5f)
 
             // ----- DIAGONALES ---------------------------------
 
@@ -69,14 +64,11 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square // Extiende los bordes para cubrir tdo el margen
             )
 
+
             // 2. Diagonal Inferior-Izquierda a Superior-Derecha
-            drawLine(
-                color = Color.White,
-                start = Offset(0f, h),
-                end = Offset(w, 0f),
-                strokeWidth = strokeDiagonal_Blanca,
-                cap = StrokeCap.Square
-            )
+            drawLine( Color.White, Offset(0f, h), Offset(w, 0f),
+                strokeDiagonal_Blanca, cap = StrokeCap.Square) //No es necesario especificar, pero tienes que seguir un orden
+
 
             // 1. Diagonal Superior-Izquierda a Inferior-Derecha
             drawLine(
@@ -95,45 +87,74 @@ fun Bandera(modifier : Modifier = Modifier) {
                 strokeWidth = strokeDiagonal_Roja,
                 cap = StrokeCap.Square
             )
-
-            //------ CRUZ -------------------------------------------------
-            // 1. Cruz central vertical
-            drawLine(
-                color = Color.White,
-                start = Offset(w / 2f, 0f),
-                end = Offset(w / 2f, h),
-                strokeWidth = strokeCruz_Blanca,
-                cap = StrokeCap.Square
-            )
-
-            // 2. Cruz central horizontal
-            drawLine(
-                color = Color.White,
-                start = Offset(0f, h / 2f),
-                end = Offset(w, h / 2f),
-                strokeWidth = strokeCruz_Blanca,
-                cap = StrokeCap.Square
-            )
-
-            // 1. Cruz central roja vertical
-            drawLine(
-                color = Color.Red,
-                start = Offset(w / 2f, 0f),
-                end = Offset(w / 2f, h),
-                strokeWidth = strokeCruz_Rojo,
-                cap = StrokeCap.Square
-            )
-
-            // 2. Cruz central roja horizontal
-            drawLine(
-                color = Color.Red,
-                start = Offset(0f, h / 2f),
-                end = Offset(w, h / 2f),
-                strokeWidth = strokeCruz_Rojo,
-                cap = StrokeCap.Square
-            )
         }
+        Box(
+            modifier = Modifier
+                .background(Color.White)
+                .constrainAs(cruzBlancaVert) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    // Centrada en la guía vertical
+                    start.linkTo(lineX)
+                    end.linkTo(lineX)
+
+                    width = Dimension.value(100.dp) // Ancho de la cruz blanca
+                    height = Dimension.fillToConstraints
+                }
+        )
+
+        // Cruz Blanca Horizontal
+        Box(
+            modifier = Modifier
+                .background(Color.White)
+                .constrainAs(cruzBlancaHoriz) {
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    // Centrada en la guía horizontal
+                    top.linkTo(lineY)
+                    bottom.linkTo(lineY)
+
+                    width = Dimension.fillToConstraints
+                    height = Dimension.value(100.dp) // Alto de la cruz blanca
+                }
+        )
+
+        // ----------------------------------------------------
+        // CAPA 3: Cruz Roja (Superpuesta al centro)
+        // ----------------------------------------------------
+        // Cruz Roja Vertical
+        Box(
+            modifier = Modifier
+                .background(Color.Red)
+                .constrainAs(cruzRojaVert) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(parent.bottom)
+                    // Centrada en la guía vertical
+                    start.linkTo(lineX)
+                    end.linkTo(lineX)
+
+                    width = Dimension.value(60.dp) // Ancho de la cruz roja
+                    height = Dimension.fillToConstraints
+                }
+        )
+
+        // Cruz Roja Horizontal
+        Box(
+            modifier = Modifier
+                .background(Color.Red)
+                .constrainAs(cruzRojaHoriz)
+                {
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                    top.linkTo(lineY)
+                    bottom.linkTo(lineY)
+
+                    width = Dimension.fillToConstraints
+                    height = Dimension.value(60.dp)
+                }
+        )
     }
+
 }
 
 
