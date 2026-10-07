@@ -33,7 +33,7 @@ fun Bandera(modifier : Modifier = Modifier) {
 
             // ----- DIAGONALES ---------------------------------
 
-            // 1. Diagonal Superior-Izquierda a Inferior-Derecha
+            // 1. Diagonal Superior-Izquierda a Inferior-Derecha.
             drawLine(
                 color = Color.White,
                 start = Offset(0f, 0f),
