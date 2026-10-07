@@ -25,11 +25,7 @@ fun Bandera(modifier : Modifier = Modifier) {
     ConstraintLayout (modifier = Modifier.fillMaxSize().background(azul))
     {
         val canvasBandera = createRef()
-
-
-        val ( cruzBlancaVert, cruzBlancaHoriz,
-            cruzRojaVert, cruzRojaHoriz) = createRefs()
-
+        val ( cruzBlancaVert, cruzBlancaHoriz, cruzRojaVert, cruzRojaHoriz) = createRefs()
         val lineY = createGuidelineFromTop(0.5f)
         val lineX = createGuidelineFromStart(0.5f)
 
@@ -48,12 +44,10 @@ fun Bandera(modifier : Modifier = Modifier) {
             val w = size.width
             val h = size.height
             val strokeDiagonal_Blanca = 150f
-            val strokeCruz_Blanca = 250f
             val strokeDiagonal_Roja = 50f
-            val strokeCruz_Rojo = 120f
 
 
-            // ----- DIAGONALES ---------------------------------
+            // DIAGONALES ---------------------------------
 
             // 1. Diagonal Superior-Izquierda a Inferior-Derecha
             drawLine(
@@ -64,83 +58,65 @@ fun Bandera(modifier : Modifier = Modifier) {
                 cap = StrokeCap.Square // Extiende los bordes para cubrir tdo el margen
             )
 
-
             // 2. Diagonal Inferior-Izquierda a Superior-Derecha
-            drawLine( Color.White, Offset(0f, h), Offset(w, 0f),
+            drawLine (Color.White, Offset(0f, h), Offset(w, 0f),
                 strokeDiagonal_Blanca, cap = StrokeCap.Square) //No es necesario especificar, pero tienes que seguir un orden
 
-
             // 1. Diagonal Superior-Izquierda a Inferior-Derecha
-            drawLine(
-                color = Color.Red,
-                start = Offset(0f, 0f),
-                end = Offset(w, h),
-                strokeWidth = strokeDiagonal_Roja,
-                cap = StrokeCap.Square
-            )
+            drawLine (Color.Red, Offset(0f, 0f), Offset(w, h),
+                strokeDiagonal_Roja, cap = StrokeCap.Square)
 
             // 2. Diagonal Inferior-Izquierda a Superior-Derecha
-            drawLine(
-                color = Color.Red,
-                start = Offset(0f, h),
-                end = Offset(w, 0f),
-                strokeWidth = strokeDiagonal_Roja,
-                cap = StrokeCap.Square
-            )
+            drawLine (Color.Red, Offset(0f, h), Offset(w, 0f),
+                strokeDiagonal_Roja, cap = StrokeCap.Square)
         }
-        Box(
-            modifier = Modifier
+
+        //CRUZ ----------------------------------------------
+        Box (modifier = Modifier
                 .background(Color.White)
-                .constrainAs(cruzBlancaVert) {
+                .constrainAs(cruzBlancaVert)
+                {
                     top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
-                    // Centrada en la guía vertical
                     start.linkTo(lineX)
                     end.linkTo(lineX)
 
-                    width = Dimension.value(100.dp) // Ancho de la cruz blanca
+                    width = Dimension.value(100.dp) //Se le pone .value para ancho personalizado
                     height = Dimension.fillToConstraints
                 }
         )
 
         // Cruz Blanca Horizontal
-        Box(
-            modifier = Modifier
+        Box (modifier = Modifier
                 .background(Color.White)
-                .constrainAs(cruzBlancaHoriz) {
+                .constrainAs(cruzBlancaHoriz)
+                {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                    // Centrada en la guía horizontal
                     top.linkTo(lineY)
                     bottom.linkTo(lineY)
 
                     width = Dimension.fillToConstraints
-                    height = Dimension.value(100.dp) // Alto de la cruz blanca
+                    height = Dimension.value(100.dp)
                 }
         )
 
-        // ----------------------------------------------------
-        // CAPA 3: Cruz Roja (Superpuesta al centro)
-        // ----------------------------------------------------
         // Cruz Roja Vertical
-        Box(
-            modifier = Modifier
+        Box (modifier = Modifier
                 .background(Color.Red)
                 .constrainAs(cruzRojaVert) {
                     top.linkTo(parent.top)
                     bottom.linkTo(parent.bottom)
-                    // Centrada en la guía vertical
                     start.linkTo(lineX)
                     end.linkTo(lineX)
 
-                    width = Dimension.value(60.dp) // Ancho de la cruz roja
+                    width = Dimension.value(60.dp)
                     height = Dimension.fillToConstraints
                 }
         )
 
         // Cruz Roja Horizontal
-        Box(
-            modifier = Modifier
+        Box (modifier = Modifier
                 .background(Color.Red)
                 .constrainAs(cruzRojaHoriz)
                 {
@@ -154,7 +130,6 @@ fun Bandera(modifier : Modifier = Modifier) {
                 }
         )
     }
-
 }
 
 
