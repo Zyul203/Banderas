@@ -52,14 +52,14 @@ fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44,)
     val pixeles = listOf(
         //Columnas
         //7
-        PixelData(col = 7 , row = 19, color = c10),
-        PixelData(col = 7 , row = 20, color = c10),
-        PixelData(col = 7 , row = 21, color = c10),
-        PixelData(col = 7 , row = 22, color = c10),
-        PixelData(col = 7 , row = 29, color = c10),
-        PixelData(col = 7 , row = 30, color = c10),
-        PixelData(col = 7 , row = 31, color = c10),
-        PixelData(col = 7 , row = 32, color = c15)
+        PixelData(col = 1 , row = 15, color = c10),
+        PixelData(col = 1 , row = 16, color = c10),
+        PixelData(col = 1 , row = 17, color = c10),
+        PixelData(col = 1 , row = 18, color = c10),
+        PixelData(col = 1 , row = 25, color = c10),
+        PixelData(col = 1 , row = 26, color = c10),
+        PixelData(col = 1 , row = 27, color = c10),
+        PixelData(col = 1, row = 28, color = c15)
 
     )
 
