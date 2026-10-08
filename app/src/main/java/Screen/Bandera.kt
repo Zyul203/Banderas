@@ -26,28 +26,28 @@ fun Bandera(modifier: Modifier = Modifier)
 
         val triangSuperiorAzul = Path().apply {
             lineTo(w, size.height * 0.25f)
-            lineTo(0f, h * 0.52f)
+            lineTo(0f, h * 0.5f)
             close()
         }
         drawPath(triangSuperiorAzul, color = azul)
 
         val triangSuperiorRojo = Path().apply {
             lineTo(w * 0.95f, size.height * 0.25f) //Altura
-            lineTo(0f, h * 0.5f)
+            lineTo(0f, h * 0.48f)
             close()
         }
         drawPath(triangSuperiorRojo, color = rojo)
 
         val triangInferiorAzul = Path().apply {
-            moveTo(0f, h * 0.46f)
+            moveTo(0f, h * 0.5f)
             lineTo(w, size.height * 0.75f)
             lineTo(0f, h)
             close()
         }
         drawPath(triangInferiorAzul, color = azul)
 
-        val triangInferiorRojo= Path().apply {
-            moveTo(14f, h * 0.46f + 16f)
+        val triangInferiorRojo = Path().apply {
+            moveTo(0f, h * 0.52f)
             lineTo(w * 0.95f, size.height * 0.75f)
             lineTo(0.5f, h - 1f)
             close()
