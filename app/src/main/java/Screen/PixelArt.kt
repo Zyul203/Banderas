@@ -36,8 +36,7 @@ data class PixelDato( //data class: Es una clase especial diseñada para almacen
 )
 
 @Composable
-fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45)
-{
+fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
 
     val c1 = colorResource(id = R.color.white)
     val c2 = colorResource(id = R.color.black)
@@ -46,35 +45,408 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45)
     val c5 = colorResource(id = R.color.naranja)
     val c6 = colorResource(id = R.color.naranja2)
     val c7 = colorResource(id = R.color.amarillo)
-    val c8 = colorResource(id = R.color.azul1)
-    val c9 = colorResource(id = R.color.azul2)
-    val c10 = colorResource(id = R.color.azul3)
+    val azulMedio = colorResource(id = R.color.azul1)
+    val azulClaro = colorResource(id = R.color.azul2)
+    val azulFuerte = colorResource(id = R.color.azul3)
     val c11 = colorResource(id = R.color.azul4)
-    val c12 = colorResource(id = R.color.crema)
-    val c13 = colorResource(id = R.color.crema2)
-    val c14 = colorResource(id = R.color.cafe1)
-    val c15 = colorResource(id = R.color.cafe2)
+    val cremaClaro = colorResource(id = R.color.crema)
+    val cremaFuerte = colorResource(id = R.color.crema2)
+    val cafeClaro = colorResource(id = R.color.cafe1)
+    val cafeFuerte = colorResource(id = R.color.cafe2)
 
 //42*42
-Column(modifier = Modifier.fillMaxWidth().aspectRatio(1f))
-{
-    Row (modifier = modifier.weight(1f).fillMaxWidth())
+    Row(modifier = Modifier.fillMaxWidth().aspectRatio(1f))
     {
-        Box(modifier = Modifier.weight(17f).background(c1))
-        Box(modifier = Modifier.weight(4f).background(c10))
-        Box(modifier = Modifier.weight(6f).background(c1))
-        Box(modifier = Modifier.weight(3f).background(c10))
-        Box(modifier = Modifier.weight(1f).background(c15))
-        Box(modifier = Modifier.weight(12f).background(c1))
+        Column(modifier = modifier.weight(1f).fillMaxSize()) //C1
+        {
+            Box(modifier = Modifier.weight(17f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(c1))
+        }
+
+        Column(modifier = modifier.weight(1f).fillMaxSize())//C2
+        {
+            Box(modifier = Modifier.weight(15f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
 
 
+        }
+
+        Column(modifier = modifier.weight(1f).fillMaxSize())//C3
+        {
+            Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C4
+        {
+            Box(modifier = Modifier.weight(13f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C5
+        {
+            Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C6
+        {
+            Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C7
+        {
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C8
+        {
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C9
+        {
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C10
+        {
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C11
+        {
+            Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C12
+        {
+            Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C13
+        {
+            Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C14
+        {
+            Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C15
+        {
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C16
+        {
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C17
+        {
+            Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C18
+        {
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C19
+        {
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C20
+        {
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C21
+        {
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C22
+        {
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C23
+        {
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C24
+        {
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C25
+        {
+            Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C26
+        {
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C27
+        {
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C28
+        {
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C29
+        {
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C30
+        {
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C31
+        {
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C32
+        {
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C33
+        {
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C34
+        {
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
+
+
+        Column (modifier = modifier.weight(1f).fillMaxSize())//C35
+        {
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
+        }
     }
-
-
-
-
-}
-
 
 
 }
