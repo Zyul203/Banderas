@@ -1,6 +1,6 @@
 package com.example.banderas
 
-import Screen.Bandera
+import Screen.PixelArt
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,13 +15,14 @@ import com.example.banderas.ui.theme.BanderasTheme
 
 class MainActivity : ComponentActivity()
 {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             BanderasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Bandera(modifier = Modifier.padding(innerPadding),)
+                    PixelArt(modifier = Modifier.fillMaxSize().padding(innerPadding))
                 }
             }
         }
@@ -33,6 +34,6 @@ class MainActivity : ComponentActivity()
 @Composable
 fun BanderaPreview() {
     BanderasTheme {
-        Bandera()
+        PixelArt()
     }
 }

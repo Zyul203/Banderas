@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="gris">#acacac</color>
     <color name="white">#FFFFFFFF</color>
     <color name="rojo">#de0000</color>
     <color name="naranja">#ff5a00</color>
@@ -14,9 +15,6 @@
     <color name="crema2">#e6cd6a</color>
     <color name="cafe1">#c5a36a</color>
     <color name="cafe2">#7a611f</color>
-    <color name="gris">#acacac</color>
-
-
 
 
 </resources>
