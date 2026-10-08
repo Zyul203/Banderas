@@ -28,7 +28,7 @@ data class PixelData( //data class: Es una clase especial diseñada para almacen
 )
 
 @Composable
-fun PixelArt(modifier: Modifier = Modifier)
+fun PixelArt(modifier: Modifier = Modifier, gridSize: Int = 50)
 {
 
     val c1 = colorResource(id = R.color.black)
@@ -52,14 +52,14 @@ fun PixelArt(modifier: Modifier = Modifier)
     val pixeles = listOf(
         //Columnas
         //7
-        PixelData(col = 7 , row = 19, color = c30),
-        PixelData(col = 7 , row = 20, color = c30),
-        PixelData(col = 7 , row = 21, color = c30),
-        PixelData(col = 7 , row = 22, color = c30),
-        PixelData(col = 7 , row = 29, color = c30),
-        PixelData(col = 7 , row = 30, color = c30),
-        PixelData(col = 7 , row = 31, color = c30),
-        PixelData(col = 7 , row = 32, color = c33),
+        PixelData(col = 7 , row = 19, color = c10),
+        PixelData(col = 7 , row = 20, color = c10),
+        PixelData(col = 7 , row = 21, color = c10),
+        PixelData(col = 7 , row = 22, color = c10),
+        PixelData(col = 7 , row = 29, color = c10),
+        PixelData(col = 7 , row = 30, color = c10),
+        PixelData(col = 7 , row = 31, color = c10),
+        PixelData(col = 7 , row = 32, color = c15),
 
     )
 
@@ -70,9 +70,8 @@ fun PixelArt(modifier: Modifier = Modifier)
 
         // Dibujar fondo
         drawRect(
-            color = backgroundColor.
-            size = Size(size.width, size.height)
-        )
+            color = Color.White,
+            size = Size(size.width, size.height))
 
         // Pintar pixeles
         pixeles.forEach { pixel ->
