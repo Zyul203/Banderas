@@ -21,14 +21,14 @@ import androidx.constraintlayout.compose.Dimension
 
 
 // Estructura de datos para definir un píxel manual (columna, fila, color)
-data class PixelData( //data class: Es una clase especial diseñada para almacenar datos
+data class PixelDato( //data class: Es una clase especial diseñada para almacenar datos
     val col: Int,
     val row: Int,
     val color: Color
 )
 
 @Composable
-fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44,)
+fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44)
 {
 
     val c1 = colorResource(id = R.color.black)
@@ -48,25 +48,24 @@ fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44,)
     val c15 = colorResource(id = R.color.cafe2)
 
 
-    // 1. Definición manual de los 3 píxeles en el código
+    //PIXEL ART
     val pixeles = listOf(
-        //Columnas
-        //7
-        PixelData(col = 1 , row = 15, color = c10),
-        PixelData(col = 1 , row = 16, color = c10),
-        PixelData(col = 1 , row = 17, color = c10),
-        PixelData(col = 1 , row = 18, color = c10),
-        PixelData(col = 1 , row = 25, color = c10),
-        PixelData(col = 1 , row = 26, color = c10),
-        PixelData(col = 1 , row = 27, color = c10),
-        PixelData(col = 1, row = 28, color = c15)
+
+        PixelDato(col = 1 , row = 15, color = c10),
+        PixelDato(col = 1 , row = 16, color = c10),
+        PixelDato(col = 1 , row = 17, color = c10),
+        PixelDato(col = 1 , row = 18, color = c10),
+        PixelDato(col = 1 , row = 25, color = c10),
+        PixelDato(col = 1 , row = 26, color = c10),
+        PixelDato(col = 1 , row = 27, color = c10),
+        PixelDato(col = 1, row = 28, color = c15)
 
     )
 
-    Canvas( modifier = modifier.fillMaxWidth().aspectRatio(1f)
-    ) {
+    Canvas(modifier = modifier.fillMaxWidth().aspectRatio(1f))
+    {
         // Tamaño en píxeles
-        val cellSize = size.width / cols
+        val celdas = size.width / cols
 
         // Dibujar fondo
         drawRect(
@@ -74,11 +73,11 @@ fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44,)
             size = Size(size.width, size.height))
 
         // Pintar pixeles
-        pixeles.forEach { pixel ->
+        pixeles.forEach { pixel -> //Es un bucle que toma la lista de píxeles
             drawRect(
                 color = pixel.color,
-                topLeft = Offset(pixel.col * cellSize, pixel.row * cellSize),
-                size = Size(cellSize, cellSize)
+                topLeft = Offset(pixel.col * celdas, pixel.row * celdas), //Define la posición inicial
+                size = Size(celdas, celdas) //Define el ancho y alto que tendrá el rectángulo
             )
         }
 
