@@ -5,16 +5,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.banderas.ui.theme.BanderasTheme
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import com.example.banderas.R
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 
@@ -28,12 +36,12 @@ data class PixelDato( //data class: Es una clase especial diseñada para almacen
 )
 
 @Composable
-fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44)
+fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45)
 {
 
-    val c1 = colorResource(id = R.color.black)
-    val c2 = colorResource(id = R.color.gris)
-    val c3 = colorResource(id = R.color.white)
+    val c1 = colorResource(id = R.color.white)
+    val c2 = colorResource(id = R.color.black)
+    val c3 = colorResource(id = R.color.gris)
     val c4 = colorResource(id = R.color.rojo)
     val c5 = colorResource(id = R.color.naranja)
     val c6 = colorResource(id = R.color.naranja2)
@@ -47,8 +55,36 @@ fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44)
     val c14 = colorResource(id = R.color.cafe1)
     val c15 = colorResource(id = R.color.cafe2)
 
+//42*42
+Column(modifier = Modifier.fillMaxWidth().aspectRatio(1f))
+{
+    Row (modifier = modifier.weight(1f).fillMaxWidth())
+    {
+        Box(modifier = Modifier.weight(17f).background(c1))
+        Box(modifier = Modifier.weight(4f).background(c10))
+        Box(modifier = Modifier.weight(6f).background(c1))
+        Box(modifier = Modifier.weight(3f).background(c10))
+        Box(modifier = Modifier.weight(1f).background(c15))
+        Box(modifier = Modifier.weight(12f).background(c1))
 
-    //PIXEL ART
+
+    }
+
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+    /*
     val pixeles = listOf(
 
         PixelDato(col = 1 , row = 15, color = c10),
@@ -82,10 +118,11 @@ fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44)
         }
 
     }
-}
+    */
+
 
 @Preview(showBackground = true)
 @Composable
-fun PixelArtGridManualPreview() {
+fun PixelArtPreview() {
     PixelArt()
 }
