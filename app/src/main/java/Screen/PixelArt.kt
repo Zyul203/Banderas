@@ -28,7 +28,7 @@ data class PixelData( //data class: Es una clase especial diseñada para almacen
 )
 
 @Composable
-fun PixelArt(modifier: Modifier = Modifier, gridSize: Int = 50)
+fun PixelArt(modifier: Modifier = Modifier, cols: Int = 39, rows: Int = 44,)
 {
 
     val c1 = colorResource(id = R.color.black)
@@ -59,14 +59,14 @@ fun PixelArt(modifier: Modifier = Modifier, gridSize: Int = 50)
         PixelData(col = 7 , row = 29, color = c10),
         PixelData(col = 7 , row = 30, color = c10),
         PixelData(col = 7 , row = 31, color = c10),
-        PixelData(col = 7 , row = 32, color = c15),
+        PixelData(col = 7 , row = 32, color = c15)
 
     )
 
     Canvas( modifier = modifier.fillMaxWidth().aspectRatio(1f)
     ) {
         // Tamaño en píxeles
-        val cellSize = size.width / gridSize
+        val cellSize = size.width / cols
 
         // Dibujar fondo
         drawRect(
