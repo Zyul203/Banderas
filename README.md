@@ -36,10 +36,8 @@
 
 *  [**IMG: Bandera de Reino Unido**](img/bandera_reino.png):  [*Practica-17-Reino Unido*](https://github.com/Zyul203/Banderas/blob/Practica-17-ReinoUnido/app/src/main/java/Screen/Bandera.kt) | [*Practica-17-Reino Unido_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-17-ReinoUnido_Constraint/app/src/main/java/Screen/Bandera.kt)
 
- *  [**IMG: Bandera de Sudáfrica**](img/bandera_sudafrica.png):  [*Practica-18-Sudáfrica*]() | [*Practica-18-Sudáfrica_Constraint*]()
+ *  [**IMG: Bandera de Sudáfrica**](img/bandera_sudafrica.png):  [*Practica-18-Sudáfrica*](https://github.com/Zyul203/Banderas/blob/Practica-18-Sudafrica/app/src/main/java/Screen/Bandera.kt) | [*Practica-18-Sudáfrica_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-18-Sudafrica_Constraint/app/src/main/java/Screen/Bandera.kt)
 
- *  [**IMG: Bandera de Bután**](img/bandera_butan.png):  [*Practica-19-Bután*]() | [*Practica-19-Bután_Constraint*]()
+ *  [**IMG: Bandera de Bután**](img/bandera_butan.png):  [*Practica-19-Bután*](https://github.com/Zyul203/Banderas/blob/Practica-19-Butan/app/src/main/java/Screen/Bandera.kt) | [*Practica-19-Bután_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-19-Butan_Constraint/app/src/main/java/Screen/Bandera.kt)
 
- *  [**IMG: Bandera de Nepal**](img/bandera_nepal.png):  [*Practica-20-Nepal*]() | [*Practica-20-Nepal_Constraint*]()
-
-
+ *  [**IMG: Bandera de Nepal**](img/bandera_nepal.png):  [*Practica-20-Nepal*](https://github.com/Zyul203/Banderas/blob/Practica-20-Nepal/app/src/main/java/Screen/Bandera.kt) | [*Practica-20-Nepal_Constraint*](https://github.com/Zyul203/Banderas/blob/Practica-20-Nepal_Constraint/app/src/main/java/Screen/Bandera.kt)
