@@ -1,6 +1,6 @@
 **INDICE DE PRACTICAS**
 
-* [**PIXELART: Cyndaquill**](img/pixelartpng):  [*PIXEL ART*](https://github.com/Zyul203/Banderas/blob/PIXEL-ART/app/src/main/java/Screen/PixelArt.kt)
+* [**PIXELART: Cyndaquill**](img/pixelart.png):  [*PIXEL ART*](https://github.com/Zyul203/Banderas/blob/PIXEL-ART/app/src/main/java/Screen/PixelArt.kt)
 
 ----------------------------------
 
