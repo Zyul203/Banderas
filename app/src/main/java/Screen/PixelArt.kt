@@ -219,10 +219,17 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulMedio))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c3))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
         }
@@ -232,8 +239,17 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
             Box(modifier = Modifier.weight(12f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
         }
@@ -242,9 +258,19 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(6f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaFuerte))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
         }
@@ -253,9 +279,21 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeFuerte))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
         }
@@ -264,9 +302,20 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(azulFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cremaFuerte))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeFuerte))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
         }
@@ -276,18 +325,27 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(cafeClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cafeClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
         }
-
+//aqidsadasdsad
         Column (modifier = modifier.weight(1f).fillMaxSize())//C18
         {
             Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -298,7 +356,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -309,7 +370,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -320,7 +384,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -331,7 +398,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -342,7 +412,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(9f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -353,6 +426,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
@@ -364,7 +441,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(7f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(10f).fillMaxSize().background(amarillo))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -375,7 +455,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -386,7 +469,10 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(8f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranjaClaro))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -397,7 +483,11 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(11f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(amarillo))
+
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
@@ -408,21 +498,30 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(amarillo))
+
+
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(13f).fillMaxSize().background(c1))
         }
-
+    //YA
         Column (modifier = modifier.weight(1f).fillMaxSize())//C30
         {
             Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(6f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(amarillo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(amarillo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(15f).fillMaxSize().background(c1))
         }
 
@@ -430,10 +529,19 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(amarillo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(15f).fillMaxSize().background(c1))
         }
 
@@ -441,10 +549,14 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranjaClaro))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(15f).fillMaxSize().background(c1))
         }
 
@@ -452,10 +564,8 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(10f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(5f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(7f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(16f).fillMaxSize().background(c1))
         }
 
@@ -463,22 +573,21 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(6f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(7f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(16f).fillMaxSize().background(c1))
         }
-
 
         Column (modifier = modifier.weight(1f).fillMaxSize())//C35
         {
             Box(modifier = Modifier.weight(9f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(16f).fillMaxSize().background(c1))
         }
 
@@ -486,10 +595,12 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(16f).fillMaxSize().background(c1))
         }
 
@@ -497,10 +608,12 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(8f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(5f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(16f).fillMaxSize().background(c1))
         }
 
@@ -508,10 +621,8 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(2f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(21f).fillMaxSize().background(c1))
         }
 
@@ -519,10 +630,8 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(naranja))
+            Box(modifier = Modifier.weight(4f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(22f).fillMaxSize().background(c1))
         }
 
@@ -530,10 +639,8 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(2f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(22f).fillMaxSize().background(c1))
         }
 
@@ -541,21 +648,15 @@ fun PixelArt(modifier: Modifier = Modifier.fillMaxSize(), gridSize: Int = 45) {
         {
             Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
+            Box(modifier = Modifier.weight(3f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
             Box(modifier = Modifier.weight(23f).fillMaxSize().background(c1))
         }
 
         Column (modifier = modifier.weight(1f).fillMaxSize())//C42
         {
-            Box(modifier = Modifier.weight(14f).fillMaxSize().background(c1))
+            Box(modifier = Modifier.weight(18f).fillMaxSize().background(c1))
             Box(modifier = Modifier.weight(1f).fillMaxSize().background(rojo))
-            Box(modifier = Modifier.weight(11f).fillMaxSize().background(azulMedio))
-            Box(modifier = Modifier.weight(3f).fillMaxSize().background(azulClaro))
-            Box(modifier = Modifier.weight(2f).fillMaxSize().background(cremaClaro))
-            Box(modifier = Modifier.weight(1f).fillMaxSize().background(c2))
             Box(modifier = Modifier.weight(23f).fillMaxSize().background(c1))
         }
 
